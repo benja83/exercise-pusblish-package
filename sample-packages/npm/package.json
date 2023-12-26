@@ -1,3 +1,18 @@
 {
-  "your": "json config here"
+  "name": "npmtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benja83/exercise-pusblish-package"
+  },
+  "keywords": [
+    "foo"
+  ],
+  "author": "",
+  "license": "ISC"
 }
