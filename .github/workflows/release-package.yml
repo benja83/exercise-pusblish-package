@@ -24,8 +24,11 @@ jobs:
         with:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
-      - run: cd sample-package/npm
-      - run: npm ci
-      - run: npm publish
+      - name: install package
+        run: npm ci
+        working-directory: ./sample-package/npm
+      - name: publish package
+        run: npm publish
+        working-directory: ./sample-package/npm
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
