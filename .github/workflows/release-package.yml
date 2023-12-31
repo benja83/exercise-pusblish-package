@@ -8,10 +8,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: '20.x'
       - name: install package
         run: npm ci
         working-directory: ./sample-packages/npm
@@ -22,10 +22,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: '20.x'
           registry-url: https://npm.pkg.github.com/
       - name: install package
         run: npm ci
@@ -34,4 +34,4 @@ jobs:
         run: npm publish
         working-directory: ./sample-packages/npm
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.REGISTRY_TOKEN}}
