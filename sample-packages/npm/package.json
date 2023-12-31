@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/benja83/exercise-pusblish-package.git"
+    "url": "git://github.com/benja83/exercise-pusblish-package.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
